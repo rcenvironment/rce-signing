@@ -1,9 +1,10 @@
 #!/bin/bash
 
+KEY_EXPORT_FILE_NAME=rce_7.x_signing_key.asc
+
 echo Downloading key...
-# note: the same key is used for 6.x and 7.x releases
-rm -f rce_6.x_signing_key.asc
-wget -q https://raw.githubusercontent.com/rcenvironment/rce-signing/master/rce_6.x_signing_key.asc
+rm -f "${KEY_EXPORT_FILE_NAME}"
+wget -q "https://raw.githubusercontent.com/rcenvironment/rce-signing/master/${KEY_EXPORT_FILE_NAME}"
 # TODO add error code checking
 echo Done.
 echo
@@ -22,7 +23,7 @@ while true; do
     esac
 done
 
-apt-key adv --import rce_6.x_signing_key.asc
+apt-key adv --import "${KEY_EXPORT_FILE_NAME}"
 echo Installing the RCE repository into the package management\'s list of sources
 rm -f /etc/apt/sources.list.d/dlr_rce_7_releases.list
 rm -f /etc/apt/sources.list.d/dlr_rce_7_snapshots.list
