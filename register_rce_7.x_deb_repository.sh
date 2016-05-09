@@ -12,7 +12,7 @@ echo The sequence of numbers and letters below is the so-called \"fingerprint\"
 echo of the signature used to verify RCE releases before installing them. You 
 echo should compare it against the RCE team\'s announcements, and only proceed
 echo if it matches.
-gpg --with-fingerprint rce_6.x_signing_key.asc | grep fingerprint
+gpg --with-fingerprint "${KEY_EXPORT_FILE_NAME}" | grep fingerprint
 
 while true; do
     read -p "Proceed [y/n]? " yn
