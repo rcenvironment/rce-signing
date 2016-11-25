@@ -28,8 +28,8 @@ echo Installing the RCE repository into the package management\'s list of source
 rm -f /etc/apt/sources.list.d/dlr_rce_7_releases.list
 rm -f /etc/apt/sources.list.d/dlr_rce_7_snapshots.list
 # TODO query for this choice
-#echo "deb http://software.dlr.de/updates/rce/7.x/products/standard/snapshots/trunk/deb/ /" >/etc/apt/sources.list.d/dlr_rce_7_snapshots.list
-echo "deb http://software.dlr.de/updates/rce/7.x/products/standard/releases/latest/deb/ /" >/etc/apt/sources.list.d/dlr_rce_7_releases.list
+#echo "deb https://software.dlr.de/updates/rce/7.x/products/standard/snapshots/trunk/deb/ /" >/etc/apt/sources.list.d/dlr_rce_7_snapshots.list
+echo "deb https://software.dlr.de/updates/rce/7.x/products/standard/releases/latest/deb/ /" >/etc/apt/sources.list.d/dlr_rce_7_releases.list
 
 # TODO add error code checking
 echo 
