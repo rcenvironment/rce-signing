@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KEY_EXPORT_FILE_NAME=rce_8.x_signing_key.asc
+KEY_EXPORT_FILE_NAME=rce_9.x_signing_key.asc
 
 echo Downloading key...
 rm -f "${KEY_EXPORT_FILE_NAME}"
@@ -27,7 +27,7 @@ gpg --import "${KEY_EXPORT_FILE_NAME}"
 # TODO add error code checking
 
 echo 
-echo If no error messages appeared above, the signature for RCE 8.x releases
+echo If no error messages appeared above, the signature for RCE 8.x and 9.x releases
 echo has been successfully installed in your system. You can use this to verify
 echo downloaded installation files using command-line tools\; please refer
 echo to the RCE User Guide for details.

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KEY_EXPORT_FILE_NAME=rce_8.x_signing_key.asc
+KEY_EXPORT_FILE_NAME=rce_9.x_signing_key.asc
 
 echo Downloading key...
 rm -f "${KEY_EXPORT_FILE_NAME}"
